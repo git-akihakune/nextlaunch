@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    name: flutter build
+    name: Flutter build
     runs-on: ubuntu-latest
     env:
       JAVA_VERSION: "11.0"
@@ -29,7 +29,7 @@ jobs:
       - run: flutter analyze
       - run: flutter test
   android_build:
-    name: android build
+    name: Android build
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v2
@@ -44,6 +44,7 @@ jobs:
       - run: flutter build apk
       - run: flutter build appbundle
   ios_build:
+    name: IOS build
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
@@ -55,6 +56,8 @@ jobs:
       - run: flutter test
       - run: flutter build ios --release --no-codesign
   web_build:
+    name: Web build
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - uses: subosito/flutter-action@v2
@@ -64,6 +67,7 @@ jobs:
     - run: flutter test
     - run: flutter build web
   windows_build:
+    name: Windows build
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
@@ -73,6 +77,7 @@ jobs:
       - run: flutter config --enable-windows-desktop
       - run: flutter build windows
   linux_build:
+    name: Linux build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -85,6 +90,7 @@ jobs:
       - run: flutter config --enable-linux-desktop
       - run: flutter build linux
   macos_build:
+    name: MacOS build
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
