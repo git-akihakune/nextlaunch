@@ -1,0 +1,5 @@
+- [ ] Ask and open notification settings when installed
+- [ ] Push notification
+- [ ] Personalization
+- [ ] Offline features
+- [ ] User published content
