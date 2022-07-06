@@ -12,7 +12,7 @@ class NextLaunchApp extends StatelessWidget {
     return const NeumorphicApp(
       debugShowCheckedModeBanner: false,
       title: 'Next Launch Test app',
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.dark,
       theme: NeumorphicThemeData(
         baseColor: Color(0xFFFFFFFF),
         lightSource: LightSource.topLeft,
@@ -28,17 +28,16 @@ class NextLaunchApp extends StatelessWidget {
   }
 }
 
-class NewsFeed extends StatelessWidget {
+class NewsFeed extends StatefulWidget {
   const NewsFeed({Key? key}) : super(key: key);
 
   @override
+  State<NewsFeed> createState() => _NewsFeedState();
+}
+
+class _NewsFeedState extends State<NewsFeed> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-          child: NeumorphicButton(
-        onPressed: () {},
-        child: const Text('Next Launch'),
-      )),
-    );
+    return const Scaffold();
   }
 }
