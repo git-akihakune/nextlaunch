@@ -12,7 +12,7 @@ class NextLaunchApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const NeumorphicApp(
       debugShowCheckedModeBanner: false,
-      title: 'Next Launch Test app',
+      title: 'NextLaunch',
       themeMode: ThemeMode.system,
       theme: NeumorphicThemeData(
         baseColor: Color(0xFFFFFFFF),
