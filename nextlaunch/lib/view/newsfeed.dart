@@ -13,7 +13,7 @@ class _NewsFeedViewState extends State<NewsFeedView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: GlassAppBar(
-        blur: -10,
+        blur: 0.01,
         borderRadius: const BorderRadius.all(Radius.circular(20)),
         title: const GlassText(
           'News',
