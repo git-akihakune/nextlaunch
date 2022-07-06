@@ -16,9 +16,9 @@ class _BaseWidgetState extends State<BaseWidget> {
   int _selectedTab = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
-    NewsFeed(),
-    Launches(),
-    Events(),
+    NewsFeedView(),
+    LaunchesView(),
+    EventsView(),
     DatabaseView(),
   ];
 

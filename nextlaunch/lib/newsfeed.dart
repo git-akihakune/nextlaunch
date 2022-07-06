@@ -1,13 +1,13 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
-class NewsFeed extends StatefulWidget {
-  const NewsFeed({Key? key}) : super(key: key);
+class NewsFeedView extends StatefulWidget {
+  const NewsFeedView({Key? key}) : super(key: key);
 
   @override
-  State<NewsFeed> createState() => _NewsFeedState();
+  State<NewsFeedView> createState() => _NewsFeedViewState();
 }
 
-class _NewsFeedState extends State<NewsFeed> {
+class _NewsFeedViewState extends State<NewsFeedView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

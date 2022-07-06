@@ -1,13 +1,13 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
-class Events extends StatefulWidget {
-  const Events({Key? key}) : super(key: key);
+class EventsView extends StatefulWidget {
+  const EventsView({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _EventsState();
+  State<StatefulWidget> createState() => _EventsViewState();
 }
 
-class _EventsState extends State<Events> {
+class _EventsViewState extends State<EventsView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
