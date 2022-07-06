@@ -25,7 +25,7 @@ class _DatabaseViewState extends State<DatabaseView> {
             onPressed: () {},
           ),
           IconButton(
-            icon: const Icon(Icons.more_vert),
+            icon: const Icon(Icons.settings_outlined),
             onPressed: () {},
           ),
         ],
