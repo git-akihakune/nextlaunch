@@ -1,4 +1,5 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'base.dart';
 
 void main() {
   runApp(const NextLaunchApp());
@@ -21,23 +22,9 @@ class NextLaunchApp extends StatelessWidget {
       darkTheme: NeumorphicThemeData(
         baseColor: Color(0xFF3E3E3E),
         lightSource: LightSource.topLeft,
-        depth: 6,
+        depth: 5,
       ),
-      home: NewsFeed(),
+      home: BaseWidget(),
     );
-  }
-}
-
-class NewsFeed extends StatefulWidget {
-  const NewsFeed({Key? key}) : super(key: key);
-
-  @override
-  State<NewsFeed> createState() => _NewsFeedState();
-}
-
-class _NewsFeedState extends State<NewsFeed> {
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
   }
 }
