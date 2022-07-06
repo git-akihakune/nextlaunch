@@ -1,9 +1,9 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:nextlaunch/launches.dart';
-import 'newsfeed.dart';
-import 'events.dart';
-import 'database.dart';
+import 'package:nextlaunch/view/launches.dart';
+import 'view/newsfeed.dart';
+import 'view/events.dart';
+import 'view/database.dart';
 
 class BaseWidget extends StatefulWidget {
   const BaseWidget({Key? key}) : super(key: key);
