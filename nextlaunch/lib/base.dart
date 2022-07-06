@@ -2,6 +2,8 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:nextlaunch/launches.dart';
 import 'newsfeed.dart';
+import 'events.dart';
+import 'database.dart';
 
 class BaseWidget extends StatefulWidget {
   const BaseWidget({Key? key}) : super(key: key);
@@ -16,8 +18,8 @@ class _BaseWidgetState extends State<BaseWidget> {
   static const List<Widget> _widgetOptions = <Widget>[
     NewsFeed(),
     Launches(),
-    Text('Third tab'),
-    Text('Fourth tab'),
+    Events(),
+    DatabaseView(),
   ];
 
   void _onItemTapped(int index) {
@@ -33,13 +35,14 @@ class _BaseWidgetState extends State<BaseWidget> {
         child: _widgetOptions.elementAt(_selectedTab),
       ),
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: const Color(0x5b69d4),
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        color: Colors.deepPurpleAccent.shade400,
         items: const <Widget>[
           Icon(Icons.newspaper_rounded, size: 30),
           Icon(Icons.rocket_launch_rounded, size: 30),
+          Icon(Icons.event_rounded, size: 30),
+          Icon(Icons.storage_rounded, size: 30),
         ],
-        // currentIndex: _selectedTab,
-        // selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
       ),
     );
