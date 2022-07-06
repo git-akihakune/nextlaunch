@@ -37,6 +37,7 @@ class _BaseWidgetState extends State<BaseWidget> {
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         color: Colors.deepPurpleAccent.shade400,
+        animationDuration: const Duration(milliseconds: 300),
         items: const <Widget>[
           Icon(Icons.newspaper_rounded, size: 30),
           Icon(Icons.rocket_launch_rounded, size: 30),
