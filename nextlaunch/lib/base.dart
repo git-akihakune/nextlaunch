@@ -1,4 +1,5 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:nextlaunch/launches.dart';
 import 'newsfeed.dart';
 
@@ -31,23 +32,14 @@ class _BaseWidgetState extends State<BaseWidget> {
       body: Center(
         child: _widgetOptions.elementAt(_selectedTab),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
-          ),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: const Color(0x5b69d4),
+        items: const <Widget>[
+          Icon(Icons.newspaper_rounded, size: 30),
+          Icon(Icons.rocket_launch_rounded, size: 30),
         ],
-        currentIndex: _selectedTab,
-        selectedItemColor: Colors.amber[800],
+        // currentIndex: _selectedTab,
+        // selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
       ),
     );
