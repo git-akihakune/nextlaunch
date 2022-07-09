@@ -30,13 +30,17 @@ class _BaseWidgetState extends State<BaseWidget> {
       ),
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        color: Colors.white70,
+        color: Theme.of(context).colorScheme.inverseSurface,
         animationDuration: const Duration(milliseconds: 300),
-        items: const <Widget>[
-          Icon(Icons.newspaper_rounded, size: 30),
-          Icon(Icons.rocket_launch_rounded, size: 30),
-          Icon(Icons.event_rounded, size: 30),
-          Icon(Icons.storage_rounded, size: 30),
+        items: <Widget>[
+          Icon(Icons.newspaper_rounded,
+              size: 30, color: Theme.of(context).colorScheme.surface),
+          Icon(Icons.rocket_launch_rounded,
+              size: 30, color: Theme.of(context).colorScheme.surface),
+          Icon(Icons.event_rounded,
+              size: 30, color: Theme.of(context).colorScheme.surface),
+          Icon(Icons.storage_rounded,
+              size: 30, color: Theme.of(context).colorScheme.surface),
         ],
         onTap: (int index) {
           setState(() {

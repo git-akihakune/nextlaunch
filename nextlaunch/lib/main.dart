@@ -13,16 +13,17 @@ class NextLaunchApp extends StatelessWidget {
     return const NeumorphicApp(
       debugShowCheckedModeBanner: false,
       title: 'NextLaunch',
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system,
       theme: NeumorphicThemeData(
         baseColor: Color(0xFFFFFFFF),
+        accentColor: Color(0x006200ee),
         lightSource: LightSource.topLeft,
         depth: 10,
       ),
       darkTheme: NeumorphicThemeData(
-        baseColor: Color(0xFF3E3E3E),
+        baseColor: Color(0x00121212),
+        accentColor: Color(0x001e1e1e),
         lightSource: LightSource.topLeft,
-        depth: 5,
       ),
       home: BaseWidget(),
     );
