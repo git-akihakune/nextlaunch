@@ -22,12 +22,6 @@ class _BaseWidgetState extends State<BaseWidget> {
     DatabaseView(),
   ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedTab = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +30,7 @@ class _BaseWidgetState extends State<BaseWidget> {
       ),
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        color: Colors.deepPurpleAccent.shade400,
+        color: Colors.white70,
         animationDuration: const Duration(milliseconds: 300),
         items: const <Widget>[
           Icon(Icons.newspaper_rounded, size: 30),
@@ -44,7 +38,11 @@ class _BaseWidgetState extends State<BaseWidget> {
           Icon(Icons.event_rounded, size: 30),
           Icon(Icons.storage_rounded, size: 30),
         ],
-        onTap: _onItemTapped,
+        onTap: (int index) {
+          setState(() {
+            _selectedTab = index;
+          });
+        },
       ),
     );
   }
