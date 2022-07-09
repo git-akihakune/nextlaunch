@@ -1,3 +1,5 @@
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+
 class Article {
   final int id;
   final String title;
@@ -39,5 +41,29 @@ class Article {
       launches: json['launches'] as List,
       events: json['events'] as List,
     );
+  }
+}
+
+class ArticleCard extends StatelessWidget {
+  final Article article;
+  const ArticleCard({Key? key, required this.article}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Neumorphic(
+        style: NeumorphicStyle(
+          boxShape: NeumorphicBoxShape.roundRect(
+            BorderRadius.circular(10),
+          ),
+          depth: 10,
+          intensity: 0.5,
+        ),
+        child: const Center(
+            child: Card(
+                child: SizedBox(
+          width: 300,
+          height: 100,
+          child: Center(child: Text('Elevated Card')),
+        ))));
   }
 }
