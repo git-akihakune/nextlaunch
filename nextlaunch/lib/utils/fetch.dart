@@ -9,8 +9,10 @@ List<Article> parseArticles(String responseBody) {
   return parsed.map<Article>((json) => Article.fromJson(json)).toList();
 }
 
-Future<List<Article>> fetchArticles(http.Client client) async {
-  const String url = 'https://api.spaceflightnewsapi.net/v3/articles';
+Future<List<Article>> fetchArticles(
+    http.Client client, int offset, int limit) async {
+  String url =
+      'https://api.spaceflightnewsapi.net/v3/articles?_start=$offset&_limit=$limit';
   final response = await client.get(Uri.parse(url));
   return compute(parseArticles, response.body);
 }
