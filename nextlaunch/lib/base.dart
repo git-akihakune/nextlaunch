@@ -30,7 +30,7 @@ class _BaseWidgetState extends State<BaseWidget> {
       ),
       bottomNavigationBar: CurvedNavigationBar(
         height: 50,
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        backgroundColor: Colors.transparent,
         color: Theme.of(context).colorScheme.inverseSurface,
         animationDuration: const Duration(milliseconds: 300),
         items: <Widget>[

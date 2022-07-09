@@ -34,6 +34,7 @@ class NextLaunchAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return NeumorphicAppBar(
+      color: Colors.transparent,
       title: Text(
         tabName,
         style: const TextStyle(
