@@ -29,6 +29,7 @@ class _BaseWidgetState extends State<BaseWidget> {
         child: _widgetOptions.elementAt(_selectedTab),
       ),
       bottomNavigationBar: CurvedNavigationBar(
+        height: 50,
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         color: Theme.of(context).colorScheme.inverseSurface,
         animationDuration: const Duration(milliseconds: 300),

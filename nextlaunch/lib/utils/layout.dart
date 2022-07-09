@@ -13,7 +13,6 @@ class NextLaunchButton extends StatelessWidget implements PreferredSizeWidget {
       onPressed: () {},
       style: const NeumorphicStyle(
         boxShape: NeumorphicBoxShape.circle(),
-        depth: 10,
       ),
       child: Container(
         alignment: Alignment.center,
