@@ -11,9 +11,9 @@ class NewsFeedView extends StatefulWidget {
 class _NewsFeedViewState extends State<NewsFeedView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const NextLaunchAppBar(tabName: 'News'),
-      body: const Center(child: Text('NewsFeedView')),
+    return const Scaffold(
+      appBar: NextLaunchAppBar(tabName: 'News'),
+      body: Center(child: Text('NewsFeedView')),
     );
   }
 }

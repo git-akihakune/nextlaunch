@@ -1,5 +1,5 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'base.dart';
+import 'package:nextlaunch/base.dart';
 
 void main() {
   runApp(const NextLaunchApp());
