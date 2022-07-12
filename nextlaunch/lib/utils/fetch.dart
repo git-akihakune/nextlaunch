@@ -16,3 +16,17 @@ Future<List<Article>> fetchArticles(
   final response = await client.get(Uri.parse(url));
   return compute(parseArticles, response.body);
 }
+
+List<Launch> parseLaunches(String responseBody) {
+  final parsed =
+      jsonDecode(responseBody)['results'][0].cast<Map<String, dynamic>>();
+  return parsed.map<Launch>((json) => Launch.fromJson(json)).toList();
+}
+
+Future<List<Launch>> fetchLaunches(
+    http.Client client, String timeline, int offset, int limit) async {
+  String url =
+      'https://spacelaunchnow.me/api/ll/2.1.0/launch/$timeline/?offset=$offset&limit=$limit';
+  final response = await client.get(Uri.parse(url));
+  return compute(parseLaunches, response.body);
+}
